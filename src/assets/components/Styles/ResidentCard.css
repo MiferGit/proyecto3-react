@@ -1,0 +1,85 @@
+.card {
+  width: 90%;
+  border: none;
+  box-shadow: 0 0 10px rgb(174, 180, 172);
+  border-radius: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0.9em;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  &:hover {
+    transition: 1s;
+    transform: scale(104%);
+  }
+}
+
+.card__image {
+  position: relative;
+  aspect-ratio: 1/1;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__image-img {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+ 
+}
+
+.card__status {
+  font-size: 20px;
+  font-family: Faculty Glyphic, sans-serif;
+  position: absolute;
+  border-radius: .5em;
+  text-shadow: 0.5px 0.6px 1px rgb(255, 255, 255);
+  font-weight: 600;
+  background-color: rgba(155, 142, 142, 0.884);
+  color: black;
+  top: 1.1em;
+  padding: 0 0.3em;
+  left: 1em;
+}
+
+.card__body {
+  background-image: url("/src/assets/image/quare.gif");
+  background-position: center;
+  background-size: contain;
+  opacity: 0.8;
+  padding-top: 0.1em;
+  padding: 1em;
+}
+
+.card__name {
+  font-size: 2rem;
+  border-bottom: 1px solid rgba(154, 156, 36, 0.986);
+  padding-bottom: 0.4em;
+  margin: .2em 0 .5em 0;
+  font-family: Faculty Glyphic;
+  text-align: center;
+  text-shadow: 1px 2px 2px rgb(255, 230, 1);
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  justify-items: center;
+  
+}
+
+.card__info-item {
+  font-size: 1em;
+  font-family: Faculty Glyphic;
+}
+
+.card__info-span {
+  font-size: 1.1em;
+}
