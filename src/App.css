@@ -19,7 +19,7 @@
 
 .container__img {
   width: 45%;
-  background-image: url("/src/assets/image/Rick\ and\ Morty.jpeg");
+  background-image: url("/src/assets/image/RickandMorty.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
