@@ -1,3 +1,5 @@
+
+
 .cards {
   background-color: rgb(0, 0, 0);
   border-radius: 1em;
@@ -7,4 +9,41 @@
   align-content: center;
   justify-items: center;
   
+}
+
+.cards__btnPag {
+  width: 20em;
+  height: 6em;
+  margin: .5em auto 4em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+  
+}
+
+.cards__btnPag-pn {
+  background-color: rgb(255, 255, 255);
+  width: 7em;
+  height: 3.6em;
+  font-size: .8em;
+  font-family: creepster, sans-serif;
+  border: none;
+  border-radius: .4em;
+  box-shadow: 0 0 13px yellow;
+  transition-duration: .5s;
+    transition-timing-function: ease-in;
+    &:hover {
+        transition: 1s;
+        
+        background-color: #41c404ef;
+    }
+
+}
+
+.cards__btn-span {
+  font-family: creepster, sans-serif;
+  font-size: 2em;
+  margin: 0 auto;
 }
