@@ -8,29 +8,12 @@ function App() {
   const [location, setLocation] = useFetch();
   const [locationId, setLocationId] = useState(1);
 
-  //Page:
-  // const [page, setPage] = useState(1)
-  // const itemsPerPage = 9
-  // const totalItems = location? location.residents.length : 0
-  // const maxPage = Math.ceil(totalItems / itemsPerPage)
-  // console.log(maxPage)
-
 
   useEffect(() => {
     setLocation(`https://rickandmortyapi.com/api/location/${locationId}`);
   }, [locationId]);
 
-  //Funtions Pages:
-//   const onPrev = ()=> {
-//     setPage(page - 1)
-//   }
-
-//   const onNext = ()=> {
-//     setPage(page + 1)
-//   }
-
-// const currentPageItems = location.residents.slice((page - 1) * itemsPerPage, page * itemsPerPage)
-  //**************************************************** */
+ 
   return (
     <>
       <div className="container">
@@ -41,7 +24,7 @@ function App() {
             <CardInfo location={location} />
           </div>
         </div>
-        <ResidentsList residents={location?.residents} />
+        <ResidentsList residents={location?.residents || []} />
           
 
       </div>

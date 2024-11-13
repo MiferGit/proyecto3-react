@@ -12,7 +12,9 @@ function ResidentsList({ residents }) {
 
   // Funtions Pages:
   const onPrev = () => {
-    setPage(page - 1);
+    if (page > 1) {
+      setPage(page - 1)
+    }
   };
 
   const onNext = () => {
@@ -27,7 +29,6 @@ function ResidentsList({ residents }) {
 
   return (
     <>
-    
       <div className="cards">
         {currentPageItems.map((resident) => {
           const residentSplit = resident.split("/");
@@ -35,20 +36,27 @@ function ResidentsList({ residents }) {
           return <ResidentCard key={id} url={resident} />;
         })}
       </div>
-      
+
       <div className="cards__btnPag">
-          <button className="cards__btnPag-pn" onClick={onPrev} disabled={page === 1}>
-            Anterior
-          </button>
-          <span className="cards__btn-span">
-            {" "}
-            {page}/{maxPage}📑{" "}
-          </span>
-          <button onClick={onNext} disabled={page === maxPage} className="cards__btnPag-pn">
-            siguiente
-          </button>
-        </div>
-       
+        <button
+          className="cards__btnPag-pn"
+          onClick={onPrev}
+          disabled={page === 1}
+        >
+          Anterior
+        </button>
+        <span className="cards__btn-span">
+          {" "}
+          {page}/{maxPage}📑{" "}
+        </span>
+        <button
+          onClick={onNext}
+          disabled={page === maxPage}
+          className="cards__btnPag-pn"
+        >
+          siguiente
+        </button>
+      </div>
     </>
   );
 }
